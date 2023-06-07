@@ -1,0 +1,6 @@
+#Uninstall Microsoft Mail and Calendar (Removes Pin)
+Get-AppxPackage -AllUsers *windowscommunicationsapps* | Remove-AppxPackage
+#Disabling the Provisioning of Microsoft Mail and Calendar'
+Get-AppxProvisionedPackage -Online | Where-Object {$_.PackageName -like "*windowscommunicationsapps*"} | Remove-AppxProvisionedPackage -Online
+taskkill /f /im explorer.exe
+start explorer.exe
