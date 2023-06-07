@@ -1,0 +1,5 @@
+#Remove Appstore Pin (Removes and reinstalls)
+Get-AppxPackage -allusers *windowsstore* | Remove-AppxPackage
+Get-AppxProvisionedPackage -Online | Where-Object {$_.PackageName -like "*windowsstore*"} | Remove-AppxProvisionedPackage -Online
+Get-AppxPackage -allusers Microsoft.WindowsStore | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
+
