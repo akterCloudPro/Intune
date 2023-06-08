@@ -1,0 +1,31 @@
+// Get-StartApps
+
+<LayoutModificationTemplate xmlns:defaultlayout="http://schemas.microsoft.com/Start/2014/FullDefaultLayout" xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout" Version="1" xmlns="http://schemas.microsoft.com/Start/2014/LayoutModification" xmlns:taskbar="http://schemas.microsoft.com/Start/2014/TaskbarLayout">
+  <LayoutOptions StartTileGroupCellWidth="6" />
+  <DefaultLayoutOverride LayoutCustomizationRestrictionType="OnlySpecifiedGroups">
+    <StartLayoutCollection>
+      <defaultlayout:StartLayout GroupCellWidth="6">
+        <start:Group Name="Microsoft 365">
+          <start:DesktopApplicationTile Size="2x2" Column="0" Row="0" DesktopApplicationLinkPath="%ProgramData%\Microsoft\Windows\Start Menu\Programs\Outlook.lnk" />
+		  <start:DesktopApplicationTile Size="2x2" Column="2" Row="0" DesktopApplicationID="MSEdge" />
+		  <start:DesktopApplicationTile Size="2x2" Column="4" Row="0" DesktopApplicationLinkPath="%ProgramData%\Microsoft\Windows\Start Menu\Programs\word.lnk" />
+		  <start:DesktopApplicationTile Size="2x2" Column="0" Row="2" DesktopApplicationID="Microsoft.Office.WINWORD.EXE.15" />
+          <start:DesktopApplicationTile Size="2x2" Column="2" Row="2" DesktopApplicationLinkPath="%ProgramData%\Microsoft\Windows\Start Menu\Programs\PowerPoint.lnk" />
+        </start:Group>
+        <start:Group Name="Applications">
+          <start:Tile Size="4x2" Column="0" Row="0" AppUserModelID="Microsoft.Office.ONENOTE.EXE.15" />
+          <start:Tile Size="4x2" Column="0" Row="0" AppUserModelID="5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App" />
+        </start:Group>
+      </defaultlayout:StartLayout>
+    </StartLayoutCollection>
+  </DefaultLayoutOverride>
+   <CustomTaskbarLayoutCollection PinListPlacement="Replace">
+      <defaultlayout:TaskbarLayout>
+        <taskbar:TaskbarPinList xmlns:taskbar="http://schemas.microsoft.com/Start/2014/TaskbarLayout">
+          <taskbar:DesktopApp DesktopApplicationID="Microsoft.Office.ONENOTE.EXE.15" />
+          <taskbar:DesktopApp DesktopApplicationID="5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App" />
+          <taskbar:DesktopApp DesktopApplicationID="com.squirrel.Teams.Teams" />
+        </taskbar:TaskbarPinList>
+      </defaultlayout:TaskbarLayout>
+   </CustomTaskbarLayoutCollection>
+</LayoutModificationTemplate>
