@@ -1,0 +1,33 @@
+{
+    "Rules": [
+        {
+            "SettingName": "NaturalAuthentication Service Available",
+            "Operator": "IsEquals",
+            "DataType": "Boolean",
+            "Operand": true,
+            "MoreInfoUrl": "https://google.com",
+            "RemediationStrings": [
+                {
+                    "Language": "en_US",
+                    "Title": "Service isn't available in the system",
+                    "Description": "Application generate this service might not be installed properly"
+                }
+            ]
+        },
+
+        {
+            "SettingName": "NaturalAuthentication Service running",
+            "Operator": "IsEquals",
+            "DataType": "Boolean",
+            "Operand": true,
+            "MoreInfoUrl": "https://google.com",
+            "RemediationStrings": [
+                {
+                    "Language": "en_US",
+                    "Title": "Service Isn't running",
+                    "Description": "Please check the service log or the application"
+                }
+            ]
+        }
+    ]
+}
