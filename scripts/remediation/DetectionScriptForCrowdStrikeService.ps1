@@ -1,6 +1,6 @@
 ## Detection script for CrowdStrike Service
-## Author: 
-## Date:  
+## Author: Akter Hossain
+## Date: 15/11/2023
 
 # Define the service name
 $serviceName = "CrowdStrike Falcon Sensor Service"
