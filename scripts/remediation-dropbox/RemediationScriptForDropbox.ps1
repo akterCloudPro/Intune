@@ -10,7 +10,7 @@ $appId = '010a1e71-f77d-4cc2-b7ec-8d655b6f98a0'
 $appVersion = '1'
 
 ## Function to record log message
-function Log-Message {
+function LogMessage {
     param (
         [string]$Message,
         [string]$LogFilePath =$LogFilePath
